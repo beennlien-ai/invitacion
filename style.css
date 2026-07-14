@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffe6f0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+.cordWrapper { text-align: center; cursor: pointer; }
+.cord { width: 10px; height: 200px; background: red; margin: 0 auto; }
+.ribbon { width: 150px; height: 150px; background: pink; margin: -10px auto; }
+.card { display: none; text-align: center; }
+.card img { width: 200px; }
+.buttons button { 
+  padding: 10px 20px; 
+  margin: 10px; 
+  border: none; 
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+#yes { background: #ff69b4; color: white; }
+#no { background: #ccc; position: absolute; }
