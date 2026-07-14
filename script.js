@@ -19,7 +19,7 @@ sunflowerImg.addEventListener('click', () => {
 
 // 2. CUANDO TOCAN "SÍ"
 btnYes.addEventListener('click', () => {
-  card.innerHTML = "<h2>¡Sabía que dirías que sí! 🥰</h2><img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzhnYmZ4cGljbXFuMDdidTFzYWlhaTByOWt4OXhxaW05cm1tNXZwaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HA9QDuYk0PBPG/giphy.gif'>";
+  card.innerHTML = "<h2>¡Sabía que dirías que sí! 🥰</h2><img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzhnYmZ4cGljbXFuMDdidTFzYWlhaTByOWt4OXhxaW05cm1tNXZwaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o6wrcORsKPdnGP7gs/giphy.gif'>";
 });
 
 // 3. CUANDO TOCAN "NO" - se escapa
