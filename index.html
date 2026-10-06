@@ -1,160 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EL DIA DE MI AMADA ANDREA</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi Andreita</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300&display=swap" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#0e0a14;color:#fff;font-family:'Inter',sans-serif;overflow-x:hidden}
-  h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400}
-  section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:40px 20px;text-align:center;overflow:hidden}
-  .bg{position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 30%, #3a2a4a 0%, #1a1225 40%, #0e0a14 100%)}
-  .stars{position:absolute;inset:0}
-  .stars span{position:absolute;width:2px;height:2px;background:white;border-radius:50%;opacity:.6;animation:twinkle 3s infinite alternate}
-  @keyframes twinkle{0%{opacity:.2}100%{opacity:1}}
-  .bokeh{position:absolute;inset:0;filter:blur(30px);opacity:.3}
-  .bokeh div{position:absolute;border-radius:50%;background:#ffc2d1}
-  /* Countdown */
-  #countdown .boxes{display:flex;gap:18px;margin:25px 0}
-  .box{width:95px;height:95px;background:rgba(255,255,255,.07);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-  .box b{font-size:32px;font-family:'Cormorant Garamond';letter-spacing:2px}
-  .box i{font-style:normal;font-size:9px;letter-spacing:2px;opacity:.6;margin-top:4px}
-  .pill{padding:8px 18px;border-radius:20px;border:1px solid rgba(255,255,255,.2);font-size:11px;letter-spacing:1px;background:rgba(255,255,255,.08);cursor:pointer;transition:.3s}
-  .pill:hover{background:white;color:#1a1225}
-  /* Gift */
-  .gift{width:110px;height:90px;background:linear-gradient(#f7d6d0,#d6a99e);position:relative;border-radius:6px;margin:20px;cursor:pointer;box-shadow:0 20px 40px rgba(0,0,0,.4)}
-  .gift::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:14px;background:#fff5;transform:translateX(-50%)}
-  .bow{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:42px}
-  .opened{animation:openBox .8s forwards}
-  @keyframes openBox{to{transform:scale(1.3) translateY(-30px);opacity:0}}
-  /* Polaroids */
-  .polaroids{position:absolute;inset:0;pointer-events:none}
-  .pol{position:absolute;width:78px;background:white;padding:6px 6px 18px 6px;box-shadow:0 10px 20px rgba(0,0,0,.4);transform:rotate(var(--r));}
-  .pol img{width:100%;height:66px;object-fit:cover;display:block}
-  /* Letter */
-  .card{max-width:620px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px;text-align:left;line-height:1.7;font-size:14px;backdrop-filter:blur(12px)}
-  #typewriter{white-space:pre-wrap}
-  /* Memories */
-  .grid{display:grid;grid-template-columns:repeat(4,110px);gap:12px;margin-top:20px}
-  .grid .pol{position:relative;pointer-events:auto;width:110px}
-  /* Video */
-  .video-wrap{width:min(520px,90vw);aspect-ratio:16/9;background:#000;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.15);position:relative}
-  .video-wrap video{width:100%;height:100%;object-fit:cover}
-  .hidden{display:none !important}
+*{margin:0;padding:0;box-sizing:border-box}body{background:#0e0a14;color:#fff;font-family:Inter;overflow-x:hidden}
+h1{font-family:'Cormorant Garamond',serif}
+section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;position:relative}
+.bg{position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 30%, #3a2a4a 0%, #1a1225 50%, #0e0a14 100%)}
+.stars span{position:absolute;width:2px;height:2px;background:white;border-radius:50%;opacity:.7}
+.boxes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.box{width:85px;height:85px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;backdrop-filter:blur(10px)}
+.box b{font-size:28px;font-family:'Cormorant Garamond'} .box i{font-style:normal;font-size:9px;letter-spacing:2px;opacity:.6}
+.pill{padding:10px 22px;border-radius:25px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:white;cursor:pointer;letter-spacing:1px}
+.pill:hover{background:white;color:#1a1225}
+.hidden{display:none!important}
 </style>
 </head>
 <body>
-
-<!-- 1. COUNTDOWN -->
-<section id="s1">
-  <div class="bg"></div><div class="stars" id="stars1"></div>
-  <p style="font-size:10px;letter-spacing:3px;opacity:.6">COMO TE AMO MI ANDREITA</p>
-  <h1 style="font-size:48px;line-height:.9;margin-top:8px">EL CUMPLEAÑOS DEL AMOR DE MI VIDA<br><i style="font-style:italic">is Coming</i></h1>
-  <p style="opacity:.5;font-size:11px;margin-top:12px">Someone very special birthday soon ♡</p>
-  <div class="boxes">
-    <div class="box"><b id="d">00</b><i>DAYS</i></div>
-    <div class="box"><b id="h">00</b><i>HOURS</i></div>
-    <div class="box"><b id="m">45</b><i>MINS</i></div>
-    <div class="box"><b id="s">00</b><i>SECS</i></div>
-  </div>
-  <button class="pill" onclick="go(2)">♡ unlock her surprises ♡</button>
-  <p style="opacity:.4;font-size:10px;margin-top:10px">HAY COSAS ESPERANDO PARA TI</p>
+<section id="s1"><div class="bg"></div>
+<p style="font-size:11px;letter-spacing:4px;opacity:.7">COMO TE AMO MI ANDREITA</p>
+<h1 style="font-size:42px;margin-top:10px">Su día especial<br><i>está por llegar</i></h1>
+<p style="opacity:.5;font-size:12px;margin-top:8px">Someone very special birthday soon ♡</p>
+<div class="boxes">
+<div class="box"><b id="d">00</b><i>DAYS</i></div>
+<div class="box"><b id="h">00</b><i>HOURS</i></div>
+<div class="box"><b id="m">00</b><i>MINS</i></div>
+<div class="box"><b id="s">00</b><i>SECS</i></div>
+</div>
+<button class="pill" onclick="document.getElementById('s1').classList.add('hidden');document.getElementById('s2').classList.remove('hidden')">♡ ver su sorpresa ♡</button>
+<p style="margin-top:12px;font-size:10px;opacity:.4;letter-spacing:2px">HAY COSAS ESPERANDO PARA TI</p>
 </section>
 
-<!-- 2. GIFT -->
-<section id="s2" class="hidden">
-  <div class="bg"></div><div class="stars" id="stars2"></div>
-  <p style="font-size:9px;letter-spacing:3px">A VERY SPECIAL SURPRISE</p>
-  <div class="gift" onclick="openGift()"><div class="bow">🎀</div></div>
-  <p style="font-size:11px;opacity:.6">click the gift to open</p>
-</section>
-
-<!-- 3. YOUR SPECIAL DAY -->
-<section id="s3" class="hidden">
-  <div class="bg"></div><div class="stars" id="stars3"></div>
-  <div class="polaroids" id="pola1"></div>
-  <p style="font-size:9px;letter-spacing:3px">A SUPER LETTER FOR YOU</p>
-  <h1 style="font-size:52px">Your<br>Special Day</h1>
-  <p style="opacity:.5;font-size:12px">Created with love, just for you</p>
-  <button class="pill" style="margin-top:18px;background:#e8a0b0;color:#2a1a22;border:none" onclick="go(4)">READ MY LETTER ♡</button>
-</section>
-
-<!-- 4. LETTER -->
-<section id="s4" class="hidden">
-  <div class="bg"></div><div class="stars" id="stars4"></div>
-  <h1 style="font-size:42px;margin-bottom:18px"><i>Happy Birthday</i></h1>
-  <div class="card"><div id="typewriter"></div></div>
-  <button class="pill" id="afterLetter" style="margin-top:20px;display:none" onclick="go(5)">SEE MEMORIES ♡</button>
-</section>
-
-<!-- 5. MEMORIES -->
-<section id="s5" class="hidden">
-  <div class="bg"></div>
-  <h1>Our Memories</h1>
-  <p style="opacity:.5;font-size:11px">every moment captured in love</p>
-  <div class="grid" id="memGrid"></div>
-  <button class="pill" style="margin-top:22px" onclick="go(6)">A MOMENT FOR YOU ♡</button>
-</section>
-
-<!-- 6. VIDEO + WISHES -->
-<section id="s6" class="hidden">
-  <div class="bg"></div><div class="stars" id="stars6"></div>
-  <h1 id="finalTitle">A Moment For You</h1>
-  <div class="video-wrap" id="vWrap">
-    <video id="vid" controls playsinline src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
-  </div>
-  <div class="card" style="margin-top:18px;text-align:center" id="wishCard">
-    <h2>Birthday Wishes</h2>
-    <p style="font-size:12px;opacity:.8;margin-top:8px">I wish you happiness, good health, and endless blessings in this new chapter of your life. All of your dreams come true... You are a wonderful person and you deserve the best.</p>
-    <button class="pill" style="margin-top:12px" onclick="showFinal()">SEE MORE ♡</button>
-  </div>
-  <h1 id="bigFinal" style="font-size:56px;margin-top:20px" class="hidden">Happy Birthday</h1>
+<section id="s2" class="hidden"><div class="bg"></div>
+<h1 style="font-size:48px">¡Ya casi es!<br><i>mi Andreita</i></h1>
+<p style="opacity:.6;margin-top:10px">Tu regalo ya está listo ♡</p>
 </section>
 
 <script>
-// --- CONFIG EDITA AQUI ---
-const BIRTHDAY = new Date("2026-05-15T00:00:00"); // pon su fecha
-const LETTER_TEXT = `HAPPY BIRTHDAY ANDREITA MI SOL ♡
+// === CAMBIA SOLO ESTA FECHA ===
+const BIRTHDAY = new Date("2026-10-15T00:00:00"); // Año-Mes-Dia
 
-Selamat ulang tahun atas hari ini yang sangat bahagia karena hari ini adalah hari lahir orang paling hebat di hidupku.
-
-Terima kasih sudah ada, sudah bikin hariku lebih berwarna, dan jadi alasanku senyum setiap hari.
-
-Di umur yang baru ini aku harap semua impianmu bisa terwujud, semoga kamu selalu dikelilingi hal-hal baik...
-
-I love you today, tomorrow, and always ♡`;
-
-const IMAGES = [
- "https://picsum.photos/200/200?1","https://picsum.photos/200/200?2",
- "https://picsum.photos/200/200?3","https://picsum.photos/200/200?4",
- "https://picsum.photos/200/200?5","https://picsum.photos/200/200?6",
- "https://picsum.photos/200/200?7","https://picsum.photos/200/200?8"
-];
-
-// --- STARS ---
-function makeStars(id){const c=document.getElementById(id);if(!c)return;for(let i=0;i<60;i++){let s=document.createElement('span');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';c.appendChild(s)}}
-["stars1","stars2","stars3","stars4","stars6"].forEach(makeStars);
-
-// --- COUNTDOWN ---
-function tick(){const now=new Date();let diff=BIRTHDAY-now;if(diff<0)diff=0;const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);document.getElementById('d').textContent=String(d).padStart(2,'0');document.getElementById('h').textContent=String(h).padStart(2,'0');document.getElementById('m').textContent=String(m).padStart(2,'0');document.getElementById('s').textContent=String(s).padStart(2,'0');}
-setInterval(tick,1000);tick();
-
-// --- NAV ---
-function go(n){document.querySelectorAll('section').forEach(s=>s.classList.add('hidden'));document.getElementById('s'+n).classList.remove('hidden');if(n==3)loadPolas();if(n==4)type();if(n==5)loadMem();}
-function openGift(){document.querySelector('.gift').classList.add('opened');setTimeout(()=>go(3),700)}
-
-// polaroids flotando
-function loadPolas(){const c=document.getElementById('pola1');c.innerHTML='';IMAGES.slice(0,6).forEach((src,i)=>{let d=document.createElement('div');d.className='pol';d.style.setProperty('--r',(Math.random()*20-10)+'deg');d.style.left=(i%2==0?5:82)+'%';d.style.top=(10+i*12)+'%';d.innerHTML=`<img src="${src}">`;c.appendChild(d)})}
-
-function loadMem(){const g=document.getElementById('memGrid');g.innerHTML='';IMAGES.forEach(src=>{let d=document.createElement('div');d.className='pol';d.style.setProperty('--r',(Math.random()*16-8)+'deg');d.innerHTML=`<img src="${src}">`;g.appendChild(d)})}
-
-// typewriter
-let ti=0;
-function type(){const el=document.getElementById('typewriter');el.textContent='';ti=0;(function loop(){if(ti<LETTER_TEXT.length){el.textContent+=LETTER_TEXT[ti++];setTimeout(loop,18);}else{document.getElementById('afterLetter').style.display='block'}})()}
-
-function showFinal(){document.getElementById('wishCard').classList.add('hidden');const t=document.getElementById('bigFinal');t.classList.remove('hidden');let msgs=["Happy Birthday","With All My Love","Always & Forever"];let idx=0;setInterval(()=>{t.textContent=msgs[idx%msgs.length];idx++},1500)}
+function tick(){
+  let diff = BIRTHDAY - new Date();
+  if(diff < 0) diff = 0;
+  const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
+  document.getElementById('d').textContent=String(d).padStart(2,'0');
+  document.getElementById('h').textContent=String(h).padStart(2,'0');
+  document.getElementById('m').textContent=String(m).padStart(2,'0');
+  document.getElementById('s').textContent=String(s).padStart(2,'0');
+}
+setInterval(tick,1000); tick();
 </script>
 </body>
 </html>
