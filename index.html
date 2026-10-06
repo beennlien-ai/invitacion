@@ -2,56 +2,85 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para mi Andreita</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300&display=swap" rel="stylesheet">
+<title>Para mi Andreita ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{background:#0e0a14;color:#fff;font-family:Inter;overflow-x:hidden}
-h1{font-family:'Cormorant Garamond',serif}
-section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;position:relative}
-.bg{position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 30%, #3a2a4a 0%, #1a1225 50%, #0e0a14 100%)}
-.stars span{position:absolute;width:2px;height:2px;background:white;border-radius:50%;opacity:.7}
-.boxes{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0}
-.box{width:85px;height:85px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;backdrop-filter:blur(10px)}
-.box b{font-size:28px;font-family:'Cormorant Garamond'} .box i{font-style:normal;font-size:9px;letter-spacing:2px;opacity:.6}
-.pill{padding:10px 22px;border-radius:25px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:white;cursor:pointer;letter-spacing:1px}
-.pill:hover{background:white;color:#1a1225}
+*{margin:0;padding:0;box-sizing:border-box}body{background:#0e0a14;color:#fff;font-family:'Inter',sans-serif}
+h1{font-family:'Cormorant Garamond',serif;font-weight:400}
+section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;position:relative;overflow:hidden}
+.bg{position:absolute;inset:0;background:radial-gradient(70% 50% at 50% 25%, #4a3560 0%, #1a1225 55%, #0e0a14 100%)}
+.stars{position:absolute;inset:0}.stars span{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.6}
+.boxes{display:flex;gap:12px;margin:18px 0}
+.box{width:88px;height:88px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;backdrop-filter:blur(12px)}
+.box b{font-size:30px;font-family:'Cormorant Garamond'} .box i{font-style:normal;font-size:9px;letter-spacing:2px;opacity:.6;margin-top:2px}
+.pill{margin-top:14px;padding:11px 26px;border-radius:30px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;letter-spacing:1px;font-size:12px}
+.pill:hover{background:#fff;color:#1a1225}
+.gift{width:120px;height:100px;background:linear-gradient(#f5d2cb,#d3a59a);border-radius:8px;position:relative;cursor:pointer;margin:20px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.gift::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:16px;background:rgba(255,255,255,.5);transform:translateX(-50%)}
+.bow{position:absolute;top:-26px;left:50%;transform:translateX(-50%);font-size:46px}
 .hidden{display:none!important}
+.card{max-width:600px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:24px;line-height:1.7;font-size:14px;text-align:left;backdrop-filter:blur(12px)}
 </style>
 </head>
 <body>
-<section id="s1"><div class="bg"></div>
+
+<section id="s1"><div class="bg"></div><div class="stars" id="st1"></div>
 <p style="font-size:11px;letter-spacing:4px;opacity:.7">COMO TE AMO MI ANDREITA</p>
-<h1 style="font-size:42px;margin-top:10px">Su día especial<br><i>está por llegar</i></h1>
-<p style="opacity:.5;font-size:12px;margin-top:8px">Someone very special birthday soon ♡</p>
+<h1 style="font-size:44px;margin-top:10px;line-height:.95">Su día especial<br><i>está por llegar</i></h1>
+<p style="opacity:.5;font-size:11px;margin-top:10px">Someone very special birthday soon ♡</p>
 <div class="boxes">
 <div class="box"><b id="d">00</b><i>DAYS</i></div>
 <div class="box"><b id="h">00</b><i>HOURS</i></div>
 <div class="box"><b id="m">00</b><i>MINS</i></div>
 <div class="box"><b id="s">00</b><i>SECS</i></div>
 </div>
-<button class="pill" onclick="document.getElementById('s1').classList.add('hidden');document.getElementById('s2').classList.remove('hidden')">♡ ver su sorpresa ♡</button>
-<p style="margin-top:12px;font-size:10px;opacity:.4;letter-spacing:2px">HAY COSAS ESPERANDO PARA TI</p>
+<button class="pill" id="btn1" onclick="go(2)">♡ HAY COSAS ESPERANDO PARA TI ♡</button>
+<p style="font-size:9px;letter-spacing:2px;opacity:.35;margin-top:12px">THERE'S A GIFT WAITING</p>
 </section>
 
-<section id="s2" class="hidden"><div class="bg"></div>
-<h1 style="font-size:48px">¡Ya casi es!<br><i>mi Andreita</i></h1>
-<p style="opacity:.6;margin-top:10px">Tu regalo ya está listo ♡</p>
+<section id="s2" class="hidden"><div class="bg"></div><div class="stars" id="st2"></div>
+<p style="font-size:10px;letter-spacing:3px;opacity:.6">A VERY SPECIAL SURPRISE</p>
+<div class="gift" onclick="openGift()"><div class="bow">🎀</div></div>
+<h1 style="font-size:38px">Un regalo para ti</h1>
+<p style="opacity:.6;font-size:11px;margin-top:6px">click para abrir</p>
+</section>
+
+<section id="s3" class="hidden"><div class="bg"></div>
+<h1 style="font-size:54px">Feliz Cumpleaños<br><i>mi Andreita</i> ♡</h1>
+<div class="card" style="margin-top:18px">
+Ella cumple mañana y yo no puedo estar más feliz. Gracias por existir, por hacer mis días más bonitos y por ser la persona más especial de mi vida.<br><br>
+En este nuevo año te deseo todo lo bonito del mundo, que todos tus sueños se cumplan y que nunca te falte una sonrisa. Te amo hoy, mañana y siempre.
+</div>
+<button class="pill" onclick="alert('¡Ya puedes mandarle el link! https://beennlien-ai.github.io/invitacion/')">Te amo ♡</button>
 </section>
 
 <script>
-// === CAMBIA SOLO ESTA FECHA ===
-const BIRTHDAY = new Date("2026-10-15T00:00:00"); // Año-Mes-Dia
+// FECHA: Mañana 6 de Octubre 2026 a las 00:40 (40 min desde ahora)
+// Si quieres que sea exactamente a las 12:00 AM cambia a "2026-10-06T00:00:00"
+const BIRTHDAY = new Date("2026-10-06T00:40:00");
+
+function makeStars(id){const c=document.getElementById(id);for(let i=0;i<50;i++){let s=document.createElement('span');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';c.appendChild(s)}}
+makeStars('st1');makeStars('st2');
 
 function tick(){
   let diff = BIRTHDAY - new Date();
-  if(diff < 0) diff = 0;
+  if(diff <= 0){
+    document.getElementById('d').textContent='00';document.getElementById('h').textContent='00';
+    document.getElementById('m').textContent='00';document.getElementById('s').textContent='00';
+    document.getElementById('btn1').textContent='♡ ¡ES HOY! ABRE TU REGALO ♡';
+    document.getElementById('btn1').style.background='white';document.getElementById('btn1').style.color='#1a1225';
+    return;
+  }
   const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
   document.getElementById('d').textContent=String(d).padStart(2,'0');
   document.getElementById('h').textContent=String(h).padStart(2,'0');
   document.getElementById('m').textContent=String(m).padStart(2,'0');
   document.getElementById('s').textContent=String(s).padStart(2,'0');
 }
-setInterval(tick,1000); tick();
+setInterval(tick,1000);tick();
+
+function go(n){document.querySelectorAll('section').forEach(s=>s.classList.add('hidden'));document.getElementById('s'+n).classList.remove('hidden')}
+function openGift(){go(3)}
 </script>
 </body>
 </html>
