@@ -3,86 +3,46 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para mi Andreita ♡</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{background:#0e0a14;color:#fff;font-family:'Inter',sans-serif}
-h1{font-family:'Cormorant Garamond',serif;font-weight:400}
-section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;position:relative;overflow:hidden}
-.bg{position:absolute;inset:0;background:radial-gradient(70% 50% at 50% 25%, #4a3560 0%, #1a1225 55%, #0e0a14 100%)}
-.stars{position:absolute;inset:0}.stars span{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.6}
-.boxes{display:flex;gap:12px;margin:18px 0}
-.box{width:88px;height:88px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;backdrop-filter:blur(12px)}
-.box b{font-size:30px;font-family:'Cormorant Garamond'} .box i{font-style:normal;font-size:9px;letter-spacing:2px;opacity:.6;margin-top:2px}
-.pill{margin-top:14px;padding:11px 26px;border-radius:30px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;letter-spacing:1px;font-size:12px}
-.pill:hover{background:#fff;color:#1a1225}
-.gift{width:120px;height:100px;background:linear-gradient(#f5d2cb,#d3a59a);border-radius:8px;position:relative;cursor:pointer;margin:20px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
-.gift::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:16px;background:rgba(255,255,255,.5);transform:translateX(-50%)}
-.bow{position:absolute;top:-26px;left:50%;transform:translateX(-50%);font-size:46px}
+*{margin:0;padding:0;box-sizing:border-box}body{background:#0e0a14;color:#fff;font-family:sans-serif}
+section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
 .hidden{display:none!important}
-.card{max-width:600px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:24px;line-height:1.7;font-size:14px;text-align:left;backdrop-filter:blur(12px)}
+.pill{margin-top:20px;padding:12px 28px;border-radius:30px;border:1px solid #fff;background:#fff;color:#1a1225;cursor:pointer;z-index:99;position:relative}
+.box{display:inline-flex;flex-direction:column;margin:6px;background:rgba(255,255,255,.1);padding:16px;border-radius:16px;min-width:70px}
 </style>
 </head>
 <body>
-
-<section id="s1"><div class="bg"></div><div class="stars" id="st1"></div>
-<p style="font-size:11px;letter-spacing:4px;opacity:.7">COMO TE AMO MI ANDREITA</p>
-<h1 style="font-size:44px;margin-top:10px;line-height:.95">Su día especial<br><i>está por llegar</i></h1>
-<p style="opacity:.5;font-size:11px;margin-top:10px">La persona mas hermosa cumple hoy ♡</p>
-<div class="boxes">
-<div class="box"><b id="d">00</b><i>DAYS</i></div>
-<div class="box"><b id="h">00</b><i>HOURS</i></div>
-<div class="box"><b id="m">00</b><i>MINS</i></div>
-<div class="box"><b id="s">00</b><i>SECS</i></div>
+<section id="s1">
+<h1>Su día especial está por llegar ♡</h1>
+<div style="margin-top:20px">
+<div class="box"><b id="d">00</b>DAYS</div>
+<div class="box"><b id="h">00</b>HOURS</div>
+<div class="box"><b id="m">00</b>MINS</div>
+<div class="box"><b id="s">00</b>SECS</div>
 </div>
 <button class="pill" id="btn1" onclick="go(2)">♡ HAY COSAS ESPERANDO PARA TI ♡</button>
-<p style="font-size:9px;letter-spacing:2px;opacity:.35;margin-top:12px">Espera un poco</p>
 </section>
-
-<section id="s2" class="hidden"><div class="bg"></div><div class="stars" id="st2"></div>
-<p style="font-size:10px;letter-spacing:3px;opacity:.6">Una sorpresa tan especial como tú</p>
-<div class="gift" onclick="openGift()"><div class="bow">🎀</div></div>
-<h1 style="font-size:38px">Un regalo para ti</h1>
-<p style="opacity:.6;font-size:11px;margin-top:6px">click para abrir</p>
+<section id="s2" class="hidden">
+<h1>Un regalo para ti 🎀</h1>
+<button class="pill" onclick="go(3)">Click para abrir</button>
 </section>
-
-<section id="s3" class="hidden"><div class="bg"></div>
-<h1 style="font-size:54px">Feliz Cumpleaños<br><i>mi Andreita</i> ♡</h1>
-<div class="card" style="margin-top:18px">
-Desde que llegaste a mi vida, le doy gracias a la vida por haberte encontrado,
-porque en ti descubrí un amor que mi corazón no sabía cuánto estaba esperando.
-Amo tu sonrisa, esa que tiene el poder de iluminar hasta mis días más grises,
-y amo tus ojos, porque en ellos encuentro un lugar donde quisiera quedarme siempre.
-Amo tu forma de ser, cada detalle que te hace única, cada gesto que te hace especial,
-y me siento profundamente orgulloso de cada cosa que haces, de cada sueño que persigues.
-Me haces feliz de una manera que no sé explicar, pero que mi corazón reconoce sin dudar,
-y si pudiera volver a elegir entre todos los caminos de la vida, volvería a encontrarte a ti.
-Gracias por existir, por ser tú, por regalarme la dicha de amarte con todo mi corazón,
-porque tenerte en mi vida es uno de los regalos más hermosos que la vida pudo darme.
-Te amo, Andrea González, y lo voy a hacer en esta y todas las vidas que existan. ❤️
-</div>
-<button class="pill" id="btn1" onclick="go(2)" style="display:block!important; position:relative; z-index:999; background:white; color:#1a1225;">♡ HAY COSAS ESPERANDO PARA TI ♡</button>
-
+<section id="s3" class="hidden">
+<h1>Feliz Cumpleaños mi Andreita ♡</h1>
+<p style="max-width:600px;margin-top:20px;line-height:1.6">Desde que llegaste a mi vida, le doy gracias a la vida por haberte encontrado... Te amo, Andrea González, y lo voy a hacer en esta y todas las vidas que existan. ❤️</p>
+</section>
 <script>
-// CAMBIA ESTO A LA HORA REAL: 2026-10-06T00:00:00
-// Para probar ahora mismo lo dejé a 10 min
-const BIRTHDAY = new Date(Date.now() + 1*60*1000);
-
-function makeStars(id){const c=document.getElementById(id);for(let i=0;i<50;i++){let s=document.createElement('span');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';c.appendChild(s)}}
-makeStars('st1');makeStars('st2');
-
+const BIRTHDAY = new Date("2026-10-06T00:00:00");
 function tick(){
-  let diff = BIRTHDAY - new Date();
-  if(diff < 0) diff = 0;
-  const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
-  document.getElementById('d').textContent=String(d).padStart(2,'0');
-  document.getElementById('h').textContent=String(h).padStart(2,'0');
-  document.getElementById('m').textContent=String(m).padStart(2,'0');
-  document.getElementById('s').textContent=String(s).padStart(2,'0');
+ let diff = BIRTHDAY - new Date();
+ if(diff<0) diff=0;
+ document.getElementById('d').textContent=String(Math.floor(diff/86400000)).padStart(2,'0');
+ document.getElementById('h').textContent=String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
+ document.getElementById('m').textContent=String(Math.floor(diff%3600000/60000)).padStart(2,'0');
+ document.getElementById('s').textContent=String(Math.floor(diff%60000/1000)).padStart(2,'0');
+ if(diff===0){document.getElementById('btn1').textContent='♡ ¡ES HOY! VER MI SORPRESA ♡'}
 }
 setInterval(tick,1000);tick();
-
-function go(n){document.querySelectorAll('section').forEach(s=>s.classList.add('hidden'));document.getElementById('s'+n).classList.remove('hidden')}
-function openGift(){go(3)}
+function go(n){document.querySelectorAll('section').forEach(s=>s.classList.add('hidden'));document.getElementById('s'+n).classList.remove('hidden');}
 </script>
 </body>
 </html>
