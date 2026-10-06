@@ -57,8 +57,7 @@ En este nuevo año te deseo todo lo bonito del mundo, que todos tus sueños se c
 <script>
 // FECHA: Mañana 6 de Octubre 2026 a las 00:40 (40 min desde ahora)
 // Si quieres que sea exactamente a las 12:00 AM cambia a "2026-10-06T00:00:00"
-const BIRTHDAY = new Date("2026-10-06T00:40:00");
-
+const BIRTHDAY = new Date(Date.now() + 35*60*1000);
 function makeStars(id){const c=document.getElementById(id);for(let i=0;i<50;i++){let s=document.createElement('span');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';c.appendChild(s)}}
 makeStars('st1');makeStars('st2');
 
