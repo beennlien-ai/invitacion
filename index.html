@@ -63,12 +63,22 @@ makeStars('st1');makeStars('st2');
 
 function tick(){
   let diff = BIRTHDAY - new Date();
-  if(diff <= 0){
-    document.getElementById('d').textContent='00';document.getElementById('h').textContent='00';
-    document.getElementById('m').textContent='00';document.getElementById('s').textContent='00';
-    document.getElementById('btn1').textContent='♡ ¡ES HOY! ABRE TU REGALO ♡';
-    document.getElementById('btn1').style.background='white';document.getElementById('btn1').style.color='#1a1225';
-    return;
+  function tick(){
+  let diff = BIRTHDAY - new Date();
+  if(diff < 0) diff = 0; // nunca negativo
+  const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
+  document.getElementById('d').textContent=String(d).padStart(2,'0');
+  document.getElementById('h').textContent=String(h).padStart(2,'0');
+  document.getElementById('m').textContent=String(m).padStart(2,'0');
+  document.getElementById('s').textContent=String(s).padStart(2,'0');
+
+  // Si ya es 0, cambia el texto del botón pero NUNCA lo escondas
+  if(diff === 0){
+    document.getElementById('btn').textContent = '♡ ¡ES HOY! VER MI SORPRESA ♡';
+    document.getElementById('btn').style.background = 'white';
+    document.getElementById('btn').style.color = '#1a1225';
+  }
+}
   }
   const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
   document.getElementById('d').textContent=String(d).padStart(2,'0');
